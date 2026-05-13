@@ -466,6 +466,14 @@
     const lbNext = document.getElementById('lb-next');
 
     let wallpapers = JSON.parse(localStorage.getItem('mc-wallpapers') || '[]');
+
+const builtInWallpapers = [
+  { src: "./images/", name: "Buried ender chest", tags: ["Ocean"], size: "3.1 MB", date: "13 May 2026" },
+  { src: "./images/", name: "Taiga village", tags: ["Day"], size: "3.1 MB", date: "13 May 2026" },
+  // add more here...
+];
+
+wallpapers = [...builtInWallpapers, ...wallpapers];
     let currentIndex = 0;
     let activeTag = 'all';
     let searchQuery = '';
